@@ -92,6 +92,14 @@ public class Restaurant {
 			return false;
 		return true;
 	}
+	public void addRestauran() {
+		// TODO Auto-generated method stub
+		
+	}
+	public void showRestauran() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	
 	

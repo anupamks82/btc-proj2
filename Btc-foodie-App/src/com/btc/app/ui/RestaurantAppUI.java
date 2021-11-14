@@ -75,7 +75,7 @@ public class RestaurantAppUI {
 			Restaurant savedRestaurant;
 			try {
 			savedRestaurant = service.addRestaurant(restaurant);
-				System.out.println("User Added Successfully..");
+				System.out.println(" Added Successfully..");
 				System.out.println(savedRestaurant);
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
@@ -87,15 +87,15 @@ public class RestaurantAppUI {
 	}
 	
 	
-	public void showUserById() {
+	public void showResturantById() {
 		System.out.print("Resturant ID : ");
 		int ResturantID=0;
 		try {
 			ResturantID=scanner.nextInt();
 			if(ResturantID<1000)
 			{
-				throw new InvalidEmployeeId("Enter four digit UserId : "+resturantId); 
-("Enter four digit UserId : "+ResturantID);
+				throw new InvalidRestaurantID("Enter four digit ResturantId : "+resturantId); 
+				("Enter four digit UserId : "+resturantID);
 			}
 		} catch (InputMismatchException e) {
 			// TODO: handle exception
@@ -108,10 +108,10 @@ public class RestaurantAppUI {
 			restaurant = service.searchRestaurantById(RestaurantID);
 			if(restaurant==null)
 			{
-				throw new NotFoundException("User ID Not Found : "+RestaurantID);
+				throw new NotFoundException("Resturant ID Not Found : "+RestaurantID);
 			}
 			
-			System.out.println(user); 
+			System.out.println(resturant); 
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -128,7 +128,7 @@ public class RestaurantAppUI {
 			ResturantID=scanner.nextInt();
 			if(ResturantID<1000)
 			{
-				throw new InvalidRestaurantID("Enter four digit UserId : "+ResturantID);
+				throw new InvalidRestaurantID("Enter four digit ResturantId : "+ResturantID);
 			}
 		} catch (InputMismatchException e) {
 			// TODO: handle exception
@@ -140,7 +140,7 @@ public class RestaurantAppUI {
 			boolean value = service.deleteRestaurantById(ResturantID);
 			if(value==false)
 			{
-				throw new NotFoundException("User ID Not Found : "+ResturantID);
+				throw new NotFoundException("Resturant ID Not Found : "+ResturantID);
 			}
 			else {
 				System.out.println("Deleted Successfully");
@@ -154,7 +154,7 @@ public class RestaurantAppUI {
 		
 	}
 	
-	public void updateUser()
+	public void updateResturant()
 	{
 		System.out.println("Enter Resturant Details :  ");
 		System.out.print("Resturant ID : ");

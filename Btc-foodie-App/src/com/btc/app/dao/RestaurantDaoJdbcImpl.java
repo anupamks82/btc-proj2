@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.btc.app.exception.DuplicateDataException;
 import com.btc.app.model.Restaurant;
 
 public class RestaurantDaoJdbcImpl implements RestaurantDao {
